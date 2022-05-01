@@ -1,30 +1,34 @@
-﻿int y;
-int wurzel;
-double ergebnis;
+﻿double[] eingabe = new double[7];
+int i;
+double max = 0;
+double min = 0;
+int tagmax = 0;
+int tagmin = 0;
 
-Console.Write("\n\tGeben sie eine Zahl ein: ");
-y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Bitte geben Sie Ihren Umsatz ein: ");
 
-Console.Write("\n\tGeben sie ein die wievielte Wurzel gezogen werden soll: ");
-wurzel = Convert.ToInt32(Console.ReadLine());
-
-ergebnis = Math.Pow(y, 1.0 / wurzel);
-
-Console.Clear();
-
-if (wurzel % 2 != 0)
+for (i = 0; i < 7; i++)
 {
-    Console.Write("\n\tDie " + wurzel + ". Wurzel aus " + y + " ist = " + ergebnis);
+    eingabe[i] = Convert.ToDouble(Console.ReadLine());
 
-    if (ergebnis % 2 != 0)
+    if (i == 0)
     {
-        Console.WriteLine("\n\n\t\t        Gerundet = " + Math.Round(ergebnis, 3));
+        max = eingabe[i];
+        min = eingabe[i];
+    }
+
+    if (eingabe[i] > max)
+    {
+        max = eingabe[i];
+        tagmax = i + 1;
+    }
+
+    if (eingabe[i] < min)
+    {
+        min = eingabe[i];
+        tagmin = i + 1;
     }
 }
 
-if (wurzel % 2 == 0)
-{
-    Console.WriteLine("\n\tDie " + wurzel + ". Wurzel aus " + y + " ist = " + ergebnis +
-                      " / " + ergebnis * -1 + "\n\n\t\t        Gerundet = " + Math.Round(ergebnis, 3) +
-                      " / " + Math.Round(ergebnis, 3) * -1);
-}
+Console.WriteLine($"Das Mínimum liegt bei: {min} und wurde am {tagmin}. Tag erzielt.");
+Console.WriteLine($"Das Maximum liegt bei: {max} und wurde am {tagmax}. Tag erzielt.");
