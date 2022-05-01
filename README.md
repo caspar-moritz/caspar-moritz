@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @caspar.moritz
-- 👀 I’m interested in programming and cyber-scruity.
+- 👀 I’m interested in programming and cyber-secruity.
 - 🌱 I’m currently learning C#
 - 📫 How to reach me: Twitter: caspar.moritz or Discord: ᴳᵒᵈDOK ﾂ#6568
 
